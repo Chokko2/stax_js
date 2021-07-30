@@ -26,3 +26,31 @@ this will create a 400x400 black canvas with the id staxCanvas<br><br>
 **Step 2**<br>
 **Adding all of the columns**
 
+The next step is to add all of the columns.<br>
+There are 3 available functions to do this.<br>
+<br>
+```
+canvas.addColInfo(amuont);
+canvas.addColMonths();
+canvas.addColDays();
+```
+<br>
+We're gonna go over the methods one by one.<br>
+<br>
+The first function `canvas.addColInfo(amount)` creates the amount of columns to the column object
+```
+canvas.addColInfo(24);
+console.log(canvas.columns);
+/*
+canvas.columns = {
+  0: {value: 0},
+  1: {value: 0},
+  2: {value: 0},
+  3: {value: 0},
+  ect...
+  23: {value: 0},
+};
+*/
+```
+<br>
+**Note: canvas.columns is 0 indexed**
