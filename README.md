@@ -8,8 +8,8 @@ Added stax_js 1.0
 
 # Getting started with Stax_JS
 
-** Step 1 **
-** Creating the base canvas **
+**Step 1
+Creating the base canvas
 
 The function createCanvas accepts 4 parameters **all optional**
 
