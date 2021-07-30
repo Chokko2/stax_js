@@ -1,4 +1,4 @@
-# stax_js
+## Stax_JS
 Made by Max 2021 July 28th
 Stax_JS is a JavaScript library or framework for building statistics
 
@@ -6,8 +6,8 @@ Stax_JS is a JavaScript library or framework for building statistics
 First stable release on github.
 Added stax_js 1.0
 
-## Getting started with Stax_JS
+# Getting started with Stax_JS
 ```
 // create the starter canvas
-createCanvas();
+createCanvas(400, 400, false, "staxCanvas");
 ```
