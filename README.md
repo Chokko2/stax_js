@@ -21,5 +21,9 @@ defaults to<br>
 createCanvas(400, 400, false, "staxCanvas");
 ```
 <br>
-this will create a 400x400 black canvas with the id staxCanvas
-<p style="background-color: black; width: 400px; height: 400px; color: white;">Hello World</p>
+this will create a 400x400 black canvas with the id staxCanvas<br><br>
+
+**Step 2**<br>
+**Setting the column amount**
+
+|[Something]|
