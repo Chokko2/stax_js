@@ -22,4 +22,4 @@ createCanvas(400, 400, false, "staxCanvas");
 ```
 
 this will create a 400x400 black canvas with the id staxCanvas
-<canvas width="400" height="400" style="background-color: black;"></canvas>
+<div style="background-color: black; width: 400px; height: 400px;"></div>
