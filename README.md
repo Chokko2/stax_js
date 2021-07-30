@@ -4,7 +4,7 @@ Stax_JS is a JavaScript library or framework for building statistics
 
 *July 30th*
 First stable release on github.
-Added stax_js 1.0
+Added Stax_JS 1.0
 
 # Getting started with Stax_JS
 
@@ -13,10 +13,13 @@ Added stax_js 1.0
 
 The function createCanvas accepts 4 parameters **all optional**<br>
 
-(canvas width, canvas height, bottom line on the canvas, canvas id)<br>
+[canvas width, canvas height, bottom line on the canvas, canvas id]<br>
 defaults to<br>
-(400, 400, true, "staxCanvas")<br>
+[400, 400, true, "staxCanvas"]<br>
 
 ```
 createCanvas(400, 400, false, "staxCanvas");
 ```
+
+this will create a 400x400 black canvas with the id staxCanvas
+<canvas width="400" height="400" style="background-color: black;"></canvas>
