@@ -37,7 +37,8 @@ canvas.addColDays();
 <br>
 We're gonna go over the methods one by one.<br>
 <br>
-The first function `canvas.addColInfo(amount)` creates the amount of columns to the column object
+The first function `canvas.addColInfo(amount)` creates the amount of columns to the column object<br>
+<br>
 ```
 canvas.addColInfo(24);
 console.log(canvas.columns);
