@@ -7,13 +7,14 @@ First stable release on github.
 Added stax_js 1.0
 
 # Getting started with Stax_JS
-```
+
 <p style="color: blue;">/*
 The function createCanvas accepts 4 parameters **all optional**
 
 (canvas width, canvas height, bottom line on the canvas, canvas id)
 defaults to
 (400, 400, true, "staxCanvas")
-*/</p>
+</p>
+```
 createCanvas(400, 400, false, "staxCanvas");
 ```
