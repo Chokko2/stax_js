@@ -120,7 +120,7 @@ class Canvas {
 	 * Add all of the days to the columns
 	 */
 	// Add all of the days to the columns
-	addDays() {
+	addColDays() {
 		this.setCols(7);
 		this.columns["mon"] = { "value": 0, };
 		this.columns["tue"] = { "value": 0, };
