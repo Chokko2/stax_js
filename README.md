@@ -16,10 +16,10 @@ The function createCanvas accepts 4 parameters **all optional**<br>
 [canvas width, canvas height, bottom line on the canvas, canvas id]<br>
 defaults to<br>
 [400, 400, true, "staxCanvas"]<br>
-
+<br>
 ```
 createCanvas(400, 400, false, "staxCanvas");
 ```
-
+<br>
 this will create a 400x400 black canvas with the id staxCanvas
-<div style="background-color: black; width: 400px; height: 400px;"></div>
+<p style="background-color: black; width: 400px; height: 400px; color: white;">Hello World</p>
