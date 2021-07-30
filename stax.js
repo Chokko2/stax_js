@@ -90,7 +90,8 @@ class Canvas {
 	 * Add all of the column info
 	 */
 	// Add a column value for every column
-	addColInfo() {
+	addColInfo(n) {
+		this.setCols(n);
 		for (let i = 0; i < this.cols; i++) {
 			this.columns[i] = { "value": 0, };
 		}
