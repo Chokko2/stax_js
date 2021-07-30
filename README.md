@@ -17,9 +17,11 @@ The function createCanvas accepts 4 parameters **all optional**<br>
 defaults to<br>
 [400, 400, true, "staxCanvas"]<br>
 <br>
-```
+
+<code>
 createCanvas(400, 400, false, "staxCanvas");
-```
+</code>
+
 <br>
 this will create a 400x400 black canvas with the id staxCanvas<br><br>
 
@@ -29,17 +31,20 @@ this will create a 400x400 black canvas with the id staxCanvas<br><br>
 The next step is to add all of the columns.<br>
 There are 3 available functions to do this.<br>
 <br>
-```
+
+<code>
 canvas.addColInfo(amuont);
 canvas.addColMonths();
 canvas.addColDays();
-```
+</code>
+
 <br>
 We're gonna go over the methods one by one.<br>
 <br>
-The first function `canvas.addColInfo(amount)` creates the amount of columns to the column object<br>
+The first function <code>canvas.addColInfo(amount)</code> creates the amount of columns to the column object<br>
 <br>
-```
+
+<code>
 canvas.addColInfo(24);
 console.log(canvas.columns);
 /*
@@ -52,6 +57,6 @@ canvas.columns = {
   23: {value: 0},
 };
 */
-```
+</code>
 <br>
 **Note: canvas.columns is 0 indexed**
