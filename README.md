@@ -24,6 +24,5 @@ createCanvas(400, 400, false, "staxCanvas");
 this will create a 400x400 black canvas with the id staxCanvas<br><br>
 
 **Step 2**<br>
-**Setting the column amount**
+**Adding all of the columns**
 
-|[Something]|
