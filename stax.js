@@ -219,6 +219,33 @@ class Canvas {
 			i++;
 		}
 	}
+
+	/**
+	 * Returns the variable inserted
+	 * @param {String} name The name of the variable you want to get
+	 * @returns canvas.columns[name]
+	 */
+	get(name) {
+		return canvas.columns[name];
+	}
+
+	/**
+	 * Sets the variable's value to the value inserted.
+	 * @param {String} name The name of the varible
+	 * @param {Number} value The value you want to change the variable to
+	 */
+	set(name, value) {
+		canvas.columns[name].value = value;
+	}
+
+	/**
+	 * Add the value inserted to the variables value
+	 * @param {String} name The name of the varible
+	 * @param {Number} value The value you want to add to the variable
+	 */
+	add(name, value) {
+		canvas.columns[name].value += value;
+	}
 }
 
 let canvas;
