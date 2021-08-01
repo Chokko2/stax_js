@@ -14,4 +14,8 @@ Added column colors
 
 [NOT RELEASED YET]
 Added addCols function which takes and adds every argument it gets, like (asd, dsad, asij)
-Added addCols function to be able to add 5 weeks and other handy stuff (week1, week2, etc...)
+Added addCols function to be able to add 5 weeks and other handy stuff (week0, week1, etc...)
+Added change all function which changes all of the variable values to the 1st argument
+Renamed set to setIndividual
+Added set function
+Added option of choosing where to start addCols

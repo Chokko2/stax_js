@@ -55,8 +55,8 @@ class Canvas {
 	addCols(...names) {
 		if (names[0].startsWith("$")) {
 			this.setCols(names[0][1]);
-			for (let i = 0; i < Number(names[0][1]); i++) {
-				this.columns[`${names[0].slice(2)}${i.toString()}`] = { "value": 0, "color": this.fgcolor };
+			for (let i = names[0][2]; i < Number(names[0][1]) + Number(names[0][2]); i++) {
+				this.columns[`${names[0].slice(3)}${i.toString()}`] = { "value": 0, "color": this.fgcolor };
 			}
 		} else {
 			this.setCols(names.length);
@@ -160,9 +160,21 @@ class Canvas {
 		return this.columns[name];
 	}
 
-	set(name, value, type = "value") {
-		if (type === "value") this.columns[name].value = value;
-		else if (type === "color") this.columns[name].color = value;
+	set(...values) {
+		let i = 0;
+		for (let key in this.columns) {
+			if (i > values.length) break;
+
+			this.columns[key].value = values[i];
+
+			i++;
+		}
+	}
+
+	setAll(value) {
+		for (let key in this.columns) {
+			this.columns[key].value = value;
+		}
 	}
 
 	setCols(amount, type = "amount") {
@@ -179,6 +191,11 @@ class Canvas {
 		this.height = height;
 		this.element.height = this.height;
 		this.endValue = this.height;
+	}
+
+	setIndividual(name, value, type = "value") {
+		if (type === "value") this.columns[name].value = value;
+		else if (type === "color") this.columns[name].color = value;
 	}
 
 	setWidth(width = 400) {
