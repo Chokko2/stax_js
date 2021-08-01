@@ -24,7 +24,7 @@ class Canvas {
 	}
 
 	add(name, value) {
-		canvas.columns[name].value += value;
+		this.columns[name].value += value;
 	}
 
 	addColDays() {
@@ -59,6 +59,20 @@ class Canvas {
 		this.columns["oct"] = { "value": 0, "color": this.fgcolor };
 		this.columns["nov"] = { "value": 0, "color": this.fgcolor };
 		this.columns["dec"] = { "value": 0, "color": this.fgcolor };
+	}
+
+	addCols(...names) {
+		if (names[0].startsWith("$")) {
+			this.setCols(names[0][1]);
+			for (let i = 0; i < Number(names[0][1]); i++) {
+				this.columns[`${names[0].slice(2)}${i.toString()}`] = { "value": 0, "color": this.fgcolor };
+			}
+		} else {
+			this.setCols(names.length);
+			for (let name of names) {
+				this.columns[name] = { "value": 0, "color": this.fgcolor };
+			}
+		}
 	}
 
 	drawColLines() {
@@ -152,12 +166,12 @@ class Canvas {
 	}
 
 	get(name) {
-		return canvas.columns[name];
+		return this.columns[name];
 	}
 
 	set(name, value, type = "value") {
-		if (type === "value") canvas.columns[name].value = value;
-		else if (type === "color") canvas.columns[name].color = value;
+		if (type === "value") this.columns[name].value = value;
+		else if (type === "color") this.columns[name].color = value;
 	}
 
 	setCols(amount, type = "amount") {
