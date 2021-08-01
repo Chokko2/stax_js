@@ -94,7 +94,7 @@ class Canvas {
 	addColInfo(n) {
 		this.setCols(n);
 		for (let i = 0; i < this.cols; i++) {
-			this.columns[i] = { "value": 0, };
+			this.columns[i] = { "value": 0, "color": this.fgcolor };
 		}
 	}
 
@@ -104,18 +104,18 @@ class Canvas {
 	// Add all of the months to the columns
 	addColMonths() {
 		this.setCols(12);
-		this.columns["jan"] = { "value": 0, };
-		this.columns["feb"] = { "value": 0, };
-		this.columns["mar"] = { "value": 0, };
-		this.columns["apr"] = { "value": 0, };
-		this.columns["may"] = { "value": 0, };
-		this.columns["jun"] = { "value": 0, };
-		this.columns["jul"] = { "value": 0, };
-		this.columns["aug"] = { "value": 0, };
-		this.columns["sep"] = { "value": 0, };
-		this.columns["oct"] = { "value": 0, };
-		this.columns["nov"] = { "value": 0, };
-		this.columns["dec"] = { "value": 0, };
+		this.columns["jan"] = { "value": 0, "color": this.fgcolor };
+		this.columns["feb"] = { "value": 0, "color": this.fgcolor };
+		this.columns["mar"] = { "value": 0, "color": this.fgcolor };
+		this.columns["apr"] = { "value": 0, "color": this.fgcolor };
+		this.columns["may"] = { "value": 0, "color": this.fgcolor };
+		this.columns["jun"] = { "value": 0, "color": this.fgcolor };
+		this.columns["jul"] = { "value": 0, "color": this.fgcolor };
+		this.columns["aug"] = { "value": 0, "color": this.fgcolor };
+		this.columns["sep"] = { "value": 0, "color": this.fgcolor };
+		this.columns["oct"] = { "value": 0, "color": this.fgcolor };
+		this.columns["nov"] = { "value": 0, "color": this.fgcolor };
+		this.columns["dec"] = { "value": 0, "color": this.fgcolor };
 	}
 
 	/**
@@ -124,13 +124,13 @@ class Canvas {
 	// Add all of the days to the columns
 	addColDays() {
 		this.setCols(7);
-		this.columns["mon"] = { "value": 0, };
-		this.columns["tue"] = { "value": 0, };
-		this.columns["wed"] = { "value": 0, };
-		this.columns["thu"] = { "value": 0, };
-		this.columns["fri"] = { "value": 0, };
-		this.columns["sat"] = { "value": 0, };
-		this.columns["sun"] = { "value": 0, };
+		this.columns["mon"] = { "value": 0, "color": this.fgcolor };
+		this.columns["tue"] = { "value": 0, "color": this.fgcolor };
+		this.columns["wed"] = { "value": 0, "color": this.fgcolor };
+		this.columns["thu"] = { "value": 0, "color": this.fgcolor };
+		this.columns["fri"] = { "value": 0, "color": this.fgcolor };
+		this.columns["sat"] = { "value": 0, "color": this.fgcolor };
+		this.columns["sun"] = { "value": 0, "color": this.fgcolor };
 	}
 
 	/**
@@ -150,9 +150,11 @@ class Canvas {
 					this.height - this.columns[key].value - 24,
 					this.spacing - 10,
 					this.columns[key].value);
-				this.ctx.fillStyle = this.fgcolor;
+				this.ctx.fillStyle = this.columns[key].color;
 				this.ctx.fill();
 				this.ctx.closePath();
+
+
 
 				// Draw the bottom line
 				this.ctx.beginPath();
@@ -165,6 +167,8 @@ class Canvas {
 				this.ctx.fillStyle = this.fgcolor;
 				this.ctx.fill();
 				this.ctx.closePath();
+
+
 
 				// Draw all of the names for the columns
 				this.ctx.beginPath();
@@ -179,6 +183,8 @@ class Canvas {
 				);
 				this.ctx.closePath();
 
+
+
 				// Else if there are no bottomlines
 			} else if (!this.bottomLines) {
 				// Draw all of the columns
@@ -188,7 +194,7 @@ class Canvas {
 					this.height - this.columns[key].value,
 					this.spacing - 10,
 					this.columns[key].value);
-				this.ctx.fillStyle = this.fgcolor;
+				this.ctx.fillStyle = this.columns[key].color;
 				this.ctx.fill();
 				this.ctx.closePath();
 			}
@@ -233,9 +239,11 @@ class Canvas {
 	 * Sets the variable's value to the value inserted.
 	 * @param {String} name The name of the varible
 	 * @param {Number} value The value you want to change the variable to
+	 * @param {String} type What you want to change, value or color
 	 */
-	set(name, value) {
-		canvas.columns[name].value = value;
+	set(name, value, type = "value") {
+		if (type === "value") canvas.columns[name].value = value;
+		else if (type === "color") canvas.columns[name].color = value;
 	}
 
 	/**
