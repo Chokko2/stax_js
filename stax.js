@@ -221,24 +221,28 @@ class Canvas {
 	}
 }
 
-// canvas is an instance of Canvas
-let canvas = new Canvas();
+let canvas;
 
 /**
  * Create the stax canvas
  * @param {Number} width The width of the canvas
  * @param {Number} height The height of the canvas
+ * @param {String} type The type of the canvas
  * @param {Boolean} bottomLines Add bottomLines
  * @param {String} id The id of the canvas
  */
 // A function to create a new canvas
-const createCanvas = function(width, height, type = "graphCanvas", bottomLines = true, id = "staxCanvas") {
+const createCanvas = function(width, height, type = "columnCanvas", bottomLines = true, id = "staxCanvas") {
 	// Create a canvas and give it the id of the id provided
 	const c = document.createElement("canvas");
 	c.setAttribute("id", id);
 
 	// Append the canvas to the body
 	document.body.appendChild(c);
+
+	if (type === "columnCanvas") {
+		canvas = new Canvas();
+	}
 
 	// Set all of the canvas variables
 	canvas.id = id;
