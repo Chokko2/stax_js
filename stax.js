@@ -1,25 +1,16 @@
 class Canvas {
 	constructor() {
 		this.id = null;
-
 		this.bgcolor = "black";
 		this.fgcolor = "white";
-
 		this.width = 0;
 		this.height = 0;
-
 		this.element = null;
-
 		this.ctx = null;
-
 		this.cols = null;
-
 		this.spacing = null;
-
 		this.columns = {};
-
 		this.bottomLines = false;
-
 		this.rowSpacing = null;
 	}
 

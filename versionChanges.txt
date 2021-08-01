@@ -1,0 +1,17 @@
+Jul 30th 2021
+Stax_JS 1.0
+
+First release
+
+
+Aug 1st 2021
+Stax_JS 1.1
+
+Organised code
+Added set, get, add functions for better column variable selection and changes
+Added column colors
+
+
+[NOT RELEASED YET]
+Added addCols function which takes and adds every argument it gets, like (asd, dsad, asij)
+Added addCols function to be able to add 5 weeks and other handy stuff (week1, week2, etc...)
