@@ -1,4 +1,5 @@
 class Canvas {
+	// TESTING TESTING @Chokko2
 	constructor() {
 		// The id of the canvas
 		this.id = null;
