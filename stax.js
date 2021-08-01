@@ -23,35 +23,19 @@ class Canvas {
 		this.rowSpacing = null;
 	}
 
-	setWidth(width = 400) {
-		this.width = width;
-		this.element.width = this.width;
+	add(name, value) {
+		canvas.columns[name].value += value;
 	}
 
-	setHeight(height = 400) {
-		this.height = height;
-		this.element.height = this.height;
-		this.endValue = this.height;
-	}
-
-	setCols(amount, type = "amount") {
-		if (type === "amount") {
-			this.cols = amount;
-			this.spacing = this.width / amount;
-		} else if (type === "spacing") {
-			this.cols = Math.round(this.width / amount);
-			this.spacing = amount;
-		}
-	}
-
-	drawColLines() {
-		for (let i = 0; i < this.cols; i++) {
-			this.ctx.beginPath();
-			this.ctx.rect(i * this.spacing + this.spacing - 1, 0, 2, this.height);
-			this.ctx.fillStyle = this.fgcolor;
-			this.ctx.fill();
-			this.ctx.closePath();
-		}
+	addColDays() {
+		this.setCols(7);
+		this.columns["mon"] = { "value": 0, "color": this.fgcolor };
+		this.columns["tue"] = { "value": 0, "color": this.fgcolor };
+		this.columns["wed"] = { "value": 0, "color": this.fgcolor };
+		this.columns["thu"] = { "value": 0, "color": this.fgcolor };
+		this.columns["fri"] = { "value": 0, "color": this.fgcolor };
+		this.columns["sat"] = { "value": 0, "color": this.fgcolor };
+		this.columns["sun"] = { "value": 0, "color": this.fgcolor };
 	}
 
 	addColInfo(n) {
@@ -77,15 +61,14 @@ class Canvas {
 		this.columns["dec"] = { "value": 0, "color": this.fgcolor };
 	}
 
-	addColDays() {
-		this.setCols(7);
-		this.columns["mon"] = { "value": 0, "color": this.fgcolor };
-		this.columns["tue"] = { "value": 0, "color": this.fgcolor };
-		this.columns["wed"] = { "value": 0, "color": this.fgcolor };
-		this.columns["thu"] = { "value": 0, "color": this.fgcolor };
-		this.columns["fri"] = { "value": 0, "color": this.fgcolor };
-		this.columns["sat"] = { "value": 0, "color": this.fgcolor };
-		this.columns["sun"] = { "value": 0, "color": this.fgcolor };
+	drawColLines() {
+		for (let i = 0; i < this.cols; i++) {
+			this.ctx.beginPath();
+			this.ctx.rect(i * this.spacing + this.spacing - 1, 0, 2, this.height);
+			this.ctx.fillStyle = this.fgcolor;
+			this.ctx.fill();
+			this.ctx.closePath();
+		}
 	}
 
 	drawCols() {
@@ -177,8 +160,25 @@ class Canvas {
 		else if (type === "color") canvas.columns[name].color = value;
 	}
 
-	add(name, value) {
-		canvas.columns[name].value += value;
+	setCols(amount, type = "amount") {
+		if (type === "amount") {
+			this.cols = amount;
+			this.spacing = this.width / amount;
+		} else if (type === "spacing") {
+			this.cols = Math.round(this.width / amount);
+			this.spacing = amount;
+		}
+	}
+
+	setHeight(height = 400) {
+		this.height = height;
+		this.element.height = this.height;
+		this.endValue = this.height;
+	}
+
+	setWidth(width = 400) {
+		this.width = width;
+		this.element.width = this.width;
 	}
 }
 
