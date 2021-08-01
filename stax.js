@@ -232,7 +232,7 @@ let canvas = new Canvas();
  * @param {String} id The id of the canvas
  */
 // A function to create a new canvas
-const createCanvas = function(width, height, bottomLines = true, id = "staxCanvas") {
+const createCanvas = function(width, height, type = "graphCanvas", bottomLines = true, id = "staxCanvas") {
 	// Create a canvas and give it the id of the id provided
 	const c = document.createElement("canvas");
 	c.setAttribute("id", id);
