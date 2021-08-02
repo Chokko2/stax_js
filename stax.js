@@ -160,20 +160,22 @@ class Canvas {
 		return this.columns[name];
 	}
 
-	set(...values) {
+	set(type, ...values) {
 		let i = 0;
 		for (let key in this.columns) {
 			if (i > values.length) break;
 
-			this.columns[key].value = values[i];
+			if (type === "value") this.columns[key].value = values[i];
+			else if (type === "color") this.columns[key].color = values[i];
 
 			i++;
 		}
 	}
 
-	setAll(value) {
+	setAll(value, type = "value") {
 		for (let key in this.columns) {
-			this.columns[key].value = value;
+			if (type === "value") this.columns[key].value = value;
+			else if (type === "color") this.columns[key].color = value;
 		}
 	}
 

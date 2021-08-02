@@ -19,3 +19,5 @@ Added change all function which changes all of the variable values to the 1st ar
 Renamed set to setIndividual
 Added set function
 Added option of choosing where to start addCols
+Added color option in setAll function
+Added color option in set function
