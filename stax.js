@@ -93,7 +93,7 @@ class Canvas {
 
 
 				this.ctx.beginPath();
-				this.ctx.fillRect(
+				this.ctx.rect(
 					0,
 					this.height - 20,
 					this.width,
