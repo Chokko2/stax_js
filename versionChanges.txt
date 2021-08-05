@@ -23,3 +23,8 @@ Added set function
 Added option of choosing where to start addCols
 Added color option in setAll function
 Added color option in set function
+
+[NO FULL RELEASE DATE YET]
+Stax_JS 1.3.pre-release
+
+Added function to center the canvas

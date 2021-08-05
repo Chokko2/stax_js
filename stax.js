@@ -76,6 +76,14 @@ class Canvas {
 		}
 	}
 
+	center() {
+		this.element.style.position = "absolute";
+		this.element.style.left = "50%";
+		this.element.style.top = "50%";
+		this.element.style.marginLeft = `-${this.width / 2}`;
+		this.element.style.marginTop = `-${this.height / 2}`;
+	}
+
 	drawCols() {
 		let i = 0;
 		for (const key in this.columns) {
