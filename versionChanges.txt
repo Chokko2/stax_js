@@ -12,7 +12,9 @@ Added set, get, add functions for better column variable selection and changes
 Added column colors
 
 
-[NOT RELEASED YET]
+Aug 5th 2021
+Stax_JS 1.2
+
 Added addCols function which takes and adds every argument it gets, like (asd, dsad, asij)
 Added addCols function to be able to add 5 weeks and other handy stuff (week0, week1, etc...)
 Added change all function which changes all of the variable values to the 1st argument

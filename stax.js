@@ -10,7 +10,7 @@ class Canvas {
 		this.cols = null;
 		this.spacing = null;
 		this.columns = {};
-		this.bottomLines = false;
+		this.bottomLine = false;
 		this.rowSpacing = null;
 	}
 
@@ -79,7 +79,7 @@ class Canvas {
 	drawCols() {
 		let i = 0;
 		for (const key in this.columns) {
-			if (this.bottomLines) {
+			if (this.bottomLine) {
 				this.ctx.beginPath();
 				this.ctx.rect(
 					i * this.spacing + 5,
@@ -119,7 +119,7 @@ class Canvas {
 
 
 
-			} else if (!this.bottomLines) {
+			} else if (!this.bottomLine) {
 				this.ctx.beginPath();
 				this.ctx.rect(
 					i * this.spacing + 5,
@@ -134,7 +134,7 @@ class Canvas {
 			if (this.rowSpacing) {
 				let j = this.height;
 
-				if (this.bottomLines) j -= 24;
+				if (this.bottomLine) j -= 24;
 
 				while (j > 0) {
 					this.ctx.beginPath();
@@ -208,7 +208,7 @@ class Canvas {
 
 let canvas;
 
-const createCanvas = function(width, height, type = "columnCanvas", bottomLines = true, id = "staxCanvas") {
+const createCanvas = function(width, height, type = "columnCanvas", id = "staxCanvas") {
 	const c = document.createElement("canvas");
 	c.setAttribute("id", id);
 
@@ -226,6 +226,4 @@ const createCanvas = function(width, height, type = "columnCanvas", bottomLines 
 
 	canvas.setWidth(width);
 	canvas.setHeight(height);
-
-	canvas.bottomLines = bottomLines;
 }
