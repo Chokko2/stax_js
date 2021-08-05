@@ -62,11 +62,12 @@ You already know the drill we're going to go over these functions and variables 
 **canvas.drawCols()** this function will draw all of the columns and the bottom line.<br>
 **canvas.rowSpacing = 20** this variable will put a black line for every (in this example) 20 pixels height (1 pixel = 1 value).<br>
 **OBSERVE**: You may put canvas.drawCols() after canvas.bottomLine and canvas.rowSpacing.
-***Please go mix with these functions for yourself***
+**Please go mix with these functions for yourself**
 
 <br>
 <br>
 Other functions and variables that may be good to know.<br>
+
 ```
 canvas.add(name, value);
 canvas.bgcolor = "black";
@@ -74,6 +75,7 @@ canvas.element;
 canvas.fgcolor = "white";
 canvas.get(name);
 ```
+
 I don't even bother.<br>
 
 **canvas.add(name, value)** will add the value specified to the variable name, `canvas.add("week 1", 50)` before: week 1's value = 100, after: week 1's value = 150 (also works with negative numbers).<br>
