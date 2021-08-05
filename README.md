@@ -19,7 +19,7 @@ The **fourth** and **last** agument is the id of the canvas, this id only matter
 (The **2 last** agruments are optional)<br>
 <br>
 <br>
-The next thing we will have to do is to add some columns, for this we have 4 different functions
+The next thing we will have to do is to add some columns, for this we have 4 different functions<br>
 ```
 canvas.addColDays();
 canvas.addColInfo(5);
