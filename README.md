@@ -66,7 +66,7 @@ You already know the drill we're going to go over these functions and variables 
 
 <br>
 <br>
-Other functions and variables that may be good to know
+Other functions and variables that may be good to know.<br>
 ```
 canvas.add(name, value);
 canvas.bgcolor = "black";
