@@ -1,8 +1,10 @@
 class Canvas {
 	constructor() {
-		this.id = null;
 		this.bgcolor = "black";
 		this.fgcolor = "white";
+		this.bottomLine = false;
+		this.rowSpacing = null;
+		// ! DO NOT CHANGE THESE VARIABLES OUTSIDE OF BLOCKS
 		this.width = 0;
 		this.height = 0;
 		this.element = null;
@@ -10,8 +12,7 @@ class Canvas {
 		this.cols = null;
 		this.spacing = null;
 		this.columns = {};
-		this.bottomLine = false;
-		this.rowSpacing = null;
+		this.id = null;
 	}
 
 	add(name, value) {
@@ -84,6 +85,7 @@ class Canvas {
 		}
 	}
 
+	// ? SHOULD I MAKE SEPARATE DRAW BOTTOM LINE
 	drawCols() {
 		let i = 0;
 		for (const key in this.columns) {
@@ -180,13 +182,14 @@ class Canvas {
 		}
 	}
 
-	setAll(value, type = "value") {
+	setAll(type = "value", value) {
 		for (let key in this.columns) {
 			if (type === "value") this.columns[key].value = value;
 			else if (type === "color") this.columns[key].color = value;
 		}
 	}
 
+	// ! OUTDATED AND USED BY OTHER CODE BLOCKS, DO NOT USE IN CODE
 	setCols(amount, type = "amount") {
 		if (type === "amount") {
 			this.cols = amount;
@@ -197,17 +200,19 @@ class Canvas {
 		}
 	}
 
+	// ! CAN MAKE THE PROJECT WEIRD AND BUGGY IF USED, DO NOT USE IN CODE
 	setHeight(height = 400) {
 		this.height = height;
 		this.element.height = this.height;
 		this.endValue = this.height;
 	}
 
-	setIndividual(name, value, type = "value") {
+	setIndividual(name, type = "value", value) {
 		if (type === "value") this.columns[name].value = value;
 		else if (type === "color") this.columns[name].color = value;
 	}
 
+	// ! CAN MAKE THE PROJECT WEIRD AND BUGGY IF USED, DO NOT USE IN CODE
 	setWidth(width = 400) {
 		this.width = width;
 		this.element.width = this.width;
