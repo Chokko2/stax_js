@@ -11,8 +11,9 @@ class Canvas {
 		this.ctx = null;
 		this.cols = null;
 		this.spacing = null;
-		this.columns = {};
 		this.id = null;
+		// ! ! DO NOT USE THESE VARIABLES
+		this.columns = {};
 	}
 
 	add(name, value) {
@@ -65,6 +66,11 @@ class Canvas {
 				this.columns[name] = { "value": 0, "color": this.fgcolor };
 			}
 		}
+	}
+
+	backgroundColor(color) {
+		this.bgcolor = color;
+		this.element.style.backgroundColor = bgcolor;
 	}
 
 	center() {

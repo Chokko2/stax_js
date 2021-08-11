@@ -43,8 +43,8 @@ canvas.setIndividual(name, value, type)
 ```
 As always we will go over the functions one by one.<br>
 **canvas.set(type, ...values)** will set all of the columns values or colors to the values specified, for example `canvas.set("value", 100, 200, 300, 100, 150)` this will make week 1's value 100, week 2's value 200 and etc...<br>
-**canvas.setAll(value, type)** will set all of the columns values or colors to the set value, for example `canvas.set("value", 100)` will make week 1's value 100, week 2's value, week 3's value<br>
-**canvas.setIndividual(name, value, type)** this function takes 3 parameters, the name of the column variable, the value and the type, for example `canvas.setIndividual("week 1", 100, "value")`<br>
+**canvas.setAll(type, value)** will set all of the columns values or colors to the set value, for example `canvas.setAll(100, "value")` will make week 1's value 100, week 2's value, week 3's value<br>
+**canvas.setIndividual(name, type, value)** this function takes 3 parameters, the name of the column variable, the value and the type, for example `canvas.setIndividual("week 1", "value", 100)`<br>
 **OBSERVE**: You can switch the type which you problaby have set to value to color instead, then instead of the value argument (100 or any number you had) you can put a color.
 <br>
 <br>
@@ -70,7 +70,7 @@ Other functions and variables that may be good to know.<br>
 
 ```
 canvas.add(name, value);
-canvas.bgcolor = "black";
+canvas.backgroundColor(color)
 canvas.element;
 canvas.fgcolor = "white";
 canvas.get(name);
@@ -79,8 +79,8 @@ canvas.get(name);
 I don't even bother.<br>
 
 **canvas.add(name, value)** will add the value specified to the variable name, `canvas.add("week 1", 50)` before: week 1's value = 100, after: week 1's value = 150 (also works with negative numbers).<br>
-**canvas.bgcolor = "black"** this variable will set the canvas variables background color to the value specified, will not apply it directly, to make it apply please do `canvas.element.style.backgroundColor = canvas.bgcolor;`<br>
-**canvas.element** this variable is something you should not change because it may cause bugs in the project, but it's useful for styling for example `canvas.element.style.border = 3px solid orange;` will set the border of the canvas to be a 3px thick orange color.<br>
+**canvas.backgroundColor(color)"**  this variable will set the background color of the canvas.<br>
+**canvas.element** this variable is something you should not change because it may cause bugs in the project, but it's useful for styling for example `canvas.element.style.border = 3px solid orange;` will set the border of the canvas to be a 3px orange color.<br>
 **canvas.fgcolor = "white** this variable will set the foreground color of the canvas.<br>
 **canvas.get(name)** will return and object of the variable specified's values.<br>
 <br><br>
