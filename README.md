@@ -10,7 +10,7 @@ Feel free to make your own version (make it better than this).<br>
 To start a project you will first need your canvas.<br>
 We have the createCanvas function for that.<br>
 ```
-createCanvas(600, 400, "columnCanvas", "staxCanvas");
+const canvas = createCanvas(600, 400, "columnCanvas", "staxCanvas");
 ```
 
 Let's go over the arguments, the **first 2 arguments** are the width and the height, in this example 600 and 400.<br>
