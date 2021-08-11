@@ -51,7 +51,7 @@ As always we will go over the functions one by one.<br>
 
 Now we need to graphically display all of these columns, we have a bunch of display options available and the names of them are:
 ```
-canvas.bottomline = true;
+canvas.bottomLine = true;
 canvas.drawColLines();
 canvas.drawCols();
 canvas.rowSpacing = 20;

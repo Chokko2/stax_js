@@ -66,6 +66,14 @@ class Canvas {
 		}
 	}
 
+	center() {
+		this.element.style.position = "absolute";
+		this.element.style.left = "50%";
+		this.element.style.top = "50%";
+		this.element.style.marginLeft = `-${this.width / 2}px`;
+		this.element.style.marginTop = `-${this.height / 2}px`;
+	}
+
 	drawColLines() {
 		for (let i = 0; i < this.cols; i++) {
 			this.ctx.beginPath();
@@ -74,14 +82,6 @@ class Canvas {
 			this.ctx.fill();
 			this.ctx.closePath();
 		}
-	}
-
-	center() {
-		this.element.style.position = "absolute";
-		this.element.style.left = "50%";
-		this.element.style.top = "50%";
-		this.element.style.marginLeft = `-${this.width / 2}`;
-		this.element.style.marginTop = `-${this.height / 2}`;
 	}
 
 	drawCols() {
