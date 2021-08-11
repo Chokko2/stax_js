@@ -9,7 +9,7 @@ Feel free to make your own version (make it better than this).<br>
 <br>
 To start a project you will first need your canvas.<br>
 We have the createCanvas function for that.<br>
-```
+```JavaScript
 const canvas = createCanvas(600, 400, "columnCanvas", "staxCanvas");
 ```
 
