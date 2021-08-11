@@ -1,6 +1,5 @@
 class Canvas {
 	constructor() {
-		this.bgcolor = "black";
 		this.fgcolor = "white";
 		this.bottomLine = false;
 		this.rowSpacing = null;
@@ -12,6 +11,7 @@ class Canvas {
 		this.cols = null;
 		this.spacing = null;
 		this.id = null;
+		this.bgcolor = "black";
 		// ! ! DO NOT USE THESE VARIABLES
 		this.columns = {};
 	}
@@ -225,17 +225,11 @@ class Canvas {
 	}
 }
 
-let canvas;
-
 const createCanvas = function(width, height, type = "columnCanvas", id = "staxCanvas") {
 	const c = document.createElement("canvas");
 	c.setAttribute("id", id);
 
 	document.body.appendChild(c);
-
-	if (type === "columnCanvas") {
-		canvas = new Canvas();
-	}
 
 	canvas.id = id;
 	canvas.element = document.getElementById(canvas.id);
@@ -245,4 +239,9 @@ const createCanvas = function(width, height, type = "columnCanvas", id = "staxCa
 
 	canvas.setWidth(width);
 	canvas.setHeight(height);
+
+
+	if (type === "columnCanvas") {
+		return new Canvas();
+	}
 }
