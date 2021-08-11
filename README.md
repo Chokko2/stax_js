@@ -20,7 +20,7 @@ The **fourth** and **last** agument is the id of the canvas, this id only matter
 <br>
 <br>
 The next thing we will have to do is to add some columns, for this we have 4 different functions<br>
-```
+```JavaScript
 canvas.addColDays();
 canvas.addColInfo(5);
 canvas.addColMonths();
@@ -36,7 +36,7 @@ Let's go over all of the functions.<br>
 <br>
 
 Now we need to set values for every single column, for this we have 3 different functions
-```
+```JavaScript
 canvas.set(type, ...values);
 canvas.setAll(value, type);
 canvas.setIndividual(name, value, type)
@@ -50,7 +50,7 @@ As always we will go over the functions one by one.<br>
 <br>
 
 Now we need to graphically display all of these columns, we have a bunch of display options available and the names of them are:
-```
+```JavaScript
 canvas.bottomLine = true;
 canvas.drawColLines();
 canvas.drawCols();
@@ -68,7 +68,7 @@ You already know the drill we're going to go over these functions and variables 
 <br>
 Other functions and variables that may be good to know.<br>
 
-```
+```JavaScript
 canvas.add(name, value);
 canvas.backgroundColor(color)
 canvas.element;
